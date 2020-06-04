@@ -1,17 +1,14 @@
 import React, { useState } from "react";
-import Buttonpad from "./Buttonpad";
 
-function MyList(props) {
+
+function MyList({ todos }) {
   const myList = <ul id="my-list"></ul>;
   return (
-    <div className="my-list">
-      <div>
-        <label for="todo">Enter a task:</label>
-        <input type="text" name="todo" id="todo"></input>
-        <Buttonpad />
-      </div>
-      myList;
-    </div>
+    <ul>
+      {todos.map(todo => (
+        <Todo todo={todo} />
+      ))}
+    </ul>
   );
 }
 
