@@ -8,7 +8,7 @@ function Form({ addTodo }) {
     completed: false
   });
   function handleTaskInputChange(e) {
-    setTodos({ ...todo, task: e.target.value });
+    setTodo({ ...todo, task: e.target.value });
   }
 
   function handleSubmit(e) {
@@ -19,15 +19,18 @@ function Form({ addTodo }) {
     }
   }
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        name="task"
-        type="text"
-        value={todo.task}
-        onChange={handleTaskInputChange} />
-      <button />
-    </form >
-  )
+    <div>
+      <form onSubmit={handleSubmit}>
+        <input
+          name="task"
+          type="text"
+          value={todo.task}
+          onChange={handleTaskInputChange} />
+        <button type="submit">submit</button>
+      </form >
+    </div>
+
+  );
 }
 
 export default Form;

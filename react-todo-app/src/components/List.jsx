@@ -1,15 +1,21 @@
 import React, { useState } from "react";
+import Todo from "./Todo";
 
 
-function MyList({ todos }) {
-  const myList = <ul id="my-list"></ul>;
+function MyList({ todos, toggleComplete, removeTodo }) {
   return (
-    <ul>
+    <ul className="todo-list"
+      style={{ visibility: todos.length ? "visible" : "hidden" }}>
       {todos.map(todo => (
-        <Todo todo={todo} />
+        <Todo
+          key={todo.id}
+          todo={todo}
+          toggleComplete={toggleComplete}
+          removeTodo={removeTodo}
+        />
       ))}
     </ul>
   );
 }
 
-export default List;
+export default MyList;
