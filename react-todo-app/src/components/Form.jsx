@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import uuid from "uuid";
+import { v4 as uuid } from "uuid";
 
 function Form({ addTodo }) {
   const [todo, setTodo] = useState({
@@ -14,7 +14,7 @@ function Form({ addTodo }) {
   function handleSubmit(e) {
     e.preventDefault();
     if (todo.task.trim()) {
-      addTodo({ ...todo, id: uuid.v4() });
+      addTodo({ ...todo, id: uuid() });
       setTodo({ ...todo, task: "" })
     }
   }
