@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="App">
       <div>
-        <p>React Todo App</p>
+        <p className="title">React Todo App</p>
         <Form addTodo={addTodo} toggleComplete={toggleComplete} />
         <List
           todos={todos}

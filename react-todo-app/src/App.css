@@ -1,16 +1,11 @@
 .App {
   text-align: center;
+  width: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title {
+  text-align: center;
+  padding-left: 10px;
 }
 
 .App-header {
@@ -27,14 +22,8 @@
 .App-link {
   color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li {
+  padding-top: 15px;
 }
 
 .todo {
@@ -70,7 +59,7 @@ button {
   font-weight: 800;
 }
 button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 input {
   margin-top: 10px;
@@ -84,14 +73,14 @@ input {
   display: flex;
   align-items: center;
 }
-.todo label{
+.todo label {
   text-align: center;
 }
-.todo li{
+.todo li {
   margin: 10px 0;
   text-align: center;
   list-style-type: none;
-  color: rgb(61,61,61);
+  color: rgb(61, 61, 61);
 }
 .todo button {
   justify-self: center;
@@ -132,7 +121,7 @@ input {
   -o-transition: all 0.3s ease-out;
   border: 2px solid blueviolet;
 }
-.checkbox-label input:checked ~ .checkbox-c{
+.checkbox-label input:checked ~ .checkbox-c {
   background-color: transparent;
   border-radius: 5px;
   -webkit-transform: rotate(0deg) scale(1);
@@ -142,7 +131,7 @@ input {
 }
 .checkbox-label .checkbox-c::after {
   position: absolute;
-  content: "";
+  content: '';
   left: 12px;
   top: 12px;
   height: 0px;
@@ -179,6 +168,7 @@ ul.ba {
 }
 p {
   font-size: 48px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: blueviolet;
 }
